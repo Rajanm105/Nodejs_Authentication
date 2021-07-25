@@ -29,11 +29,12 @@ async function loginUser(e){
             let token = res.token;
 
             localStorage.setItem('user',JSON.stringify(res));
+            alert('Login Successfull');
+            window.location.href = './welcome.html';
             
         })
         .catch(err => console.log(err));
-        alert('Login Successfull');
-        window.location.href = './welcome.html';
+        
     }catch(err){
         alert(err);
         return err;
