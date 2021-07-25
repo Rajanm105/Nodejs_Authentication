@@ -20,8 +20,8 @@ mongoose.connect(process.env.mongoURI,{
 
 app.use('/api/demo',require('./routes/users'));
 
-
-app.listen(process.env.PORT || 5000 ,() => {
+const PORT = process.env.PORT || 5000;
+app.listen( PORT, () => {
     console.log(`Server is running on ${process.env.PORT}`);
 });
 
