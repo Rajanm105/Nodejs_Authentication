@@ -28,7 +28,7 @@ async function loginUser(e){
             console.log(res);
             let token = res.token;
 
-            window.localStorage.setItem('user',JSON.stringify(res));
+            localStorage.setItem('user',JSON.stringify(res));
             
         })
         .catch(err => console.log(err));
